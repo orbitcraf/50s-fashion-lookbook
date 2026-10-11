@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5f0">
+  <meta name="description" content="1アイテム税込1万円以下を目安に、普段使いしやすい50代女性向けコーデを100パターン。季節やスタイルから、明日の服を見つけましょう。">
+  <title>50代からの毎日コーデ</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/style.css">
+  <script src="data/outfits.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#lookbook">コーデ一覧へ</a>
+  <header class="masthead"><a class="wordmark" href="./">毎日コーデ<span>50代からのおしゃれノート</span></a><span class="header-note">自分らしく、心地よく。</span></header>
+  <main>
+    <section class="intro" aria-labelledby="site-title">
+      <p class="eyebrow">EVERYDAY LOOKBOOK <span>100 STYLES</span></p>
+      <h1 id="site-title">50代からの<br class="mobile-break">毎日コーデ<span class="title-dot">.</span></h1>
+      <p class="subtitle">無理しない。高すぎない。ちゃんと素敵。</p>
+      <p class="description">1アイテム1万円以下を目安に、<br>普段使いしやすい50代女性向けコーデを100パターン集めました。</p>
+      <div class="intro-foot"><span class="budget-label">1アイテム <strong>税込1万円以下</strong>が目安</span><a class="browse-link" href="#lookbook">今日のコーデを探す <span aria-hidden="true">↓</span></a></div>
+    </section>
+    <section id="lookbook" class="lookbook" aria-labelledby="lookbook-title">
+      <div class="section-heading"><h2 id="lookbook-title">明日は、何を着よう。</h2><p id="result-count" aria-live="polite" aria-atomic="true">100コーデ</p></div>
+      <nav class="filters" aria-label="コーデを絞り込む" id="filters"></nav>
+      <div class="selection-line"><p id="selection-label">すべてのコーデ</p><span>写真をタップして詳しく見る <span aria-hidden="true">↗</span></span></div>
+      <div class="outfit-grid" id="outfit-grid"></div>
+      <p class="empty-state" id="empty-state" hidden>条件に合うコーデがありません。別のフィルターをお試しください。</p>
+      <noscript><p>コーデ一覧を表示するには、ブラウザのJavaScriptを有効にしてください。</p></noscript>
+    </section>
+    <aside class="editor-note"><span class="eyebrow">A LITTLE NOTE</span><h2>好きな色も、好きな形も。<br>今の自分に似合う楽しみ方を。</h2><p>価格は税込の参考レンジで、実在する商品の販売価格ではありません。<br>写真はすべてAIで生成した架空の人物・服装です。着こなしのヒントとしてお楽しみください。</p></aside>
+  </main>
+  <footer><span>50代からの毎日コーデ</span><a href="#site-title">ページの上へ ↑</a></footer>
+  <dialog id="outfit-dialog" aria-labelledby="detail-title">
+    <button class="close-button" id="close-dialog" type="button" aria-label="詳細を閉じる">×</button>
+    <div class="detail-layout">
+      <div class="detail-photo"><img id="detail-image" alt="" width="960" height="1200" loading="lazy"><div id="detail-placeholder" class="placeholder" hidden><span>写真準備中</span></div></div>
+      <div class="detail-content"><p class="eyebrow" id="detail-number"></p><h2 id="detail-title"></h2><div class="tags" id="detail-tags"></div><dl id="detail-info"></dl><section class="point-box"><h3>着こなしのポイント</h3><p id="detail-point"></p></section><p class="price-note">価格は税込の参考目安です。実在商品の価格ではありません。</p><div class="detail-navigation"><button id="previous-outfit" type="button">← 前へ</button><span id="detail-position" aria-live="polite"></span><button id="next-outfit" type="button">次へ →</button></div></div>
+    </div>
+  </dialog>
+</body>
+</html>
